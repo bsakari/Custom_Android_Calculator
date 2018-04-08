@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.kingwanyama.calculator.MainActivity">
+
+    <EditText
+        android:id="@+id/number1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="First Number"
+        android:inputType="numberDecimal"
+        android:layout_below="@+id/clear"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/number2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Second Number"
+        android:inputType="numberDecimal"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/number1"
+        android:layout_alignStart="@+id/number1" />
+
+    <Button
+        android:onClick="addition"
+        android:id="@+id/btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:layout_above="@+id/btn3"
+        android:layout_toLeftOf="@+id/btn2"
+        android:layout_toStartOf="@+id/btn2"
+        android:layout_marginRight="61dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginBottom="53dp" />
+
+    <Button
+        android:onClick="subtract"
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/btn1"
+        android:layout_marginEnd="66dp"
+        android:layout_marginRight="66dp"
+        android:text="Subtract" />
+
+    <Button
+        android:onClick="subtracting"
+        android:id="@+id/btn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Divide"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/btn1"
+        android:layout_alignStart="@+id/btn1"
+        android:layout_marginBottom="31dp" />
+
+    <Button
+        android:onClick="multiply"
+        android:id="@+id/btn4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btn2"
+        android:layout_alignStart="@+id/btn2"
+        android:layout_alignTop="@+id/btn3"
+        android:text="Multiply" />
+
+    <TextView
+        android:hint="Answer"
+        android:background="#e1fab3"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="#024d00"
+        android:id="@+id/tv1"
+        android:layout_width="500px"
+        android:layout_height="200px"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/number1"
+        android:layout_alignEnd="@+id/number1"
+        android:layout_marginRight="19dp"
+        android:layout_marginEnd="19dp" />
+
+    <Button
+        android:onClick="Clear"
+        android:id="@+id/clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Clear" />
+
+</RelativeLayout>
